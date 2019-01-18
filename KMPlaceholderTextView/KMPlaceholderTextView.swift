@@ -96,10 +96,11 @@ open class KMPlaceholderTextView: UITextView {
     }
     
     private func commonInit() {
+        
         #if swift(>=4.2)
         let notificationName = UITextView.textDidChangeNotification
         #else
-        let notificationName = NSNotification.Name.UITextView.textDidChangeNotification
+        let notificationName = NSNotification.Name.UITextViewTextDidChange
         #endif
       
         NotificationCenter.default.addObserver(self,
